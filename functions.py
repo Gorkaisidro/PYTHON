@@ -3,7 +3,7 @@ def greet(name):
 greet("Gorka")
 
 print("----")
-numbers = [1,5,2,2,3,4,5,5,6,7]
+numbers = [1, 2, 3, 10, 11, 12, 13, 14, 22, 23, 33, 44, 55, 66, 77, 88, 99, 101, 111, 252, 262, 292, 300, 301]
 
 #1. Write a function that takes a list of numbers as an argument and returns the sum of the odd numbers in the list.
 def sum(numbers):
@@ -64,3 +64,13 @@ print(prime_numbers(numbers))
 print("----")
 
 #7. Write a function that takes a list of numbers and returns a new list with only the palindromes from the first list.
+
+def es_palindromo(num):
+    num_str = str(num)
+    return num_str == num_str[::-1]
+
+def numeros_palindromos(numeros):
+    palindromos = [num for num in numeros if es_palindromo(num)]
+    return palindromos
+
+print(numeros_palindromos(numbers))
